@@ -1,0 +1,432 @@
+	<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="/./img/logo.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>FORTWALL</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/nice-select.css">							
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+			<link rel="stylesheet" href="css/main.css">
+
+			
+		</head>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar styles */
+    header {
+      background: #222;
+      color: #fff;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #logo img {
+      width: 240px;
+    }
+
+    nav#navMenu {
+      display: flex;
+    }
+
+    nav#navMenu ul {
+      display: flex;
+      list-style: none;
+      gap: 40px;
+      letter-spacing: 1px;
+      font-size: 15px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav#navMenu ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav#navMenu ul li a:hover {
+      color: #c6b069;
+    }
+
+    .menu-bar {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .menu-bar div {
+      width: 25px;
+      height: 3px;
+      background: #fff;
+      transition: all 0.3s;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      nav#navMenu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        padding: 10px 0;
+      }
+
+      nav#navMenu.active {
+        display: flex;
+      }
+
+      nav#navMenu ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .menu-bar {
+        display: flex;
+      }
+    }
+
+    /* Project header styles */
+    .project-header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #262916, #c6b069);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fade-in-heading {
+      font-size: 2.8rem;
+      color: #ebebeb;
+      margin-bottom: 10px;
+      animation: fadeInUp 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    .project-meta {
+      font-size: 1.5rem;
+      color: #ffffff;
+      margin-top: 30px;
+      animation: fadeIn 1.6s ease-out forwards;
+      opacity: 0;
+    }
+
+    .underline {
+      width: 80px;
+      height: 4px;
+      margin: 10px auto;
+      background-color: #fff;
+      border-radius: 2px;
+      animation: expandLine 1s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes expandLine {
+      from {
+        width: 0;
+        opacity: 0;
+      }
+      to {
+        width: 80px;
+        opacity: 1;
+      }
+    }
+
+    .project-description {
+      font-size: 20px;
+      letter-spacing: 1px;
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      color: #444;
+      line-height: 1.7;
+      hyphens: auto;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    @media (max-width: 768px) {
+      .project-header h1 {
+        font-size: 1.6rem;
+      }
+
+      .image-gallery img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div id="logo">
+        <a href="index.html">
+          <img src="img/Mlogowhite.png" alt="Logo" />
+        </a>
+      </div>
+      <div class="menu-bar" id="menuToggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav id="navMenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/#aboutus">About</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Project Header -->
+  <div class="project-header">
+    <h1  class="fade-in-heading">		PADLE X SPORTS COMPANY</h1>
+    <div class="underline"></div>
+    <div class="project-meta mt-24"> AL WAHA	 &nbsp;&nbsp;|&nbsp;&nbsp;  ONGOING </div>
+  </div>
+
+  <!-- Description -->
+  <div class="project-description">
+    <p>
+    		Demolition of existing concrete structures,Removal of old pipes and cables,New concrete screeding,Painting,Drainage system,Construction of new bathroom facility to complement the existing infrastructure 
+            </p>
+  </div>
+
+  <!-- Gallery -->
+  <div class="image-gallery">
+    <!-- You can add more images here -->
+    <img src="img/Projects/PadleX/padlex01.jpg" loading="lazy" alt="ADRESSS image 1" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex02.jpg" loading="lazy" alt="ADRESSS image 2" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex03.jpg" loading="lazy" alt="ADRESSS image 3" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex04.jpg" loading="lazy" alt="ADRESSS image 1" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex05.jpg" loading="lazy" alt="ADRESSS image 2" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex06.jpg" loading="lazy" alt="ADRESSS image 3" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex07.jpg" loading="lazy" alt="ADRESSS image 1" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex08.jpg" loading="lazy" alt="ADRESSS image 2" onclick="openModal(this.src)">
+
+
+    <img src="img/Projects/PadleX/padlex09.jpg" loading="lazy" alt="ADRESSS image 1" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex010.jpg" loading="lazy" alt="ADRESSS image 2" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex011.jpg" loading="lazy" alt="ADRESSS image 3" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex012.jpg" loading="lazy" alt="ADRESSS image 1" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex013.jpg" loading="lazy" alt="ADRESSS image 2" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex014.jpg" loading="lazy" alt="ADRESSS image 3" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex015.jpg" loading="lazy" alt="ADRESSS image 1" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex016.jpg" loading="lazy" alt="ADRESSS image 2" onclick="openModal(this.src)">
+
+
+
+    <img src="img/Projects/PadleX/padlex1.jpg" loading="lazy" alt="ADRESSS image 1" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex2.jpg" loading="lazy" alt="ADRESSS image 2" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex3.jpg" loading="lazy" alt="ADRESSS image 3" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex4.jpg" loading="lazy" alt="ADRESSS image 1" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex5.jpg" loading="lazy" alt="ADRESSS image 2" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex6.jpg" loading="lazy" alt="ADRESSS image 3" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex7.jpg" loading="lazy" alt="ADRESSS image 1" onclick="openModal(this.src)">
+    <img src="img/Projects/PadleX/padlex8.jpg" loading="lazy" alt="ADRESSS image 2" onclick="openModal(this.src)">
+
+
+
+
+    <!-- Add up to 25 or more images -->
+  </div>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+
+  	<footer class="footer-area section-gap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5 col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>About Us</h6>
+								<p>
+								Precision in every brick, built strong for every future need and vision.
+								</p>
+			
+							</div>
+						</div>
+						<div class="col-lg-5  col-md-6 col-sm-6">
+							<div class="single-footer-widget">
+								<h6>Newsletter</h6>
+								<p>Stay update with our latest</p>
+								<div class="" id="mc_embed_signup">
+									<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+										<input class="form-control" name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required="" type="email">
+			                            	<button class="click-btn btn btn-default"><i class="lnr lnr-arrow-right" aria-hidden="true"></i></button>
+			                            	<div style="position: absolute; left: -5000px;">
+												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+											</div>
+										<div class="info"></div>
+									</form>
+								</div>
+							</div>
+						</div>						
+						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+							<div class="single-footer-widget">
+								<h6>Follow Us</h6>
+								<p>Let us be social</p>
+								<div class="footer-social d-flex align-items-center">
+									<a href="#"><i class="fa fa-facebook"></i></a>
+									<a href="#"><i class="fa fa-twitter"></i></a>
+									<a href="#"><i class="fa fa-dribbble"></i></a>
+									<a href="#"><i class="fa fa-behance"></i></a>
+								</div>
+							</div>
+						</div>							
+					</div>
+				</div>
+			</footer>	
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("active");
+    });
+
+    // Modal logic
+    function openModal(src) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modal.style.display = "flex";
+      modalImg.src = src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById("imageModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    };
+  </script>
+
+</body>
+</html>
