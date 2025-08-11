@@ -2858,6 +2858,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-color: #fff;
     border: 1px solid #eeeeee;
     border-radius: 10px;
+    height: 230px;
     padding: 25px 30px 25px 30px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -2892,7 +2893,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 575px) {
     .single-testimonial {
-        margin: 15px
+        margin: 12px;
+        height: 290px;
+    
+
     }
 }
 
