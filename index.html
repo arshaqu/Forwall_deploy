@@ -35,24 +35,7 @@
 
 			
 			  <header id="header" id="home">
-		  		<!-- <div class="header-top">
-		  			<div class="container">
-				  		<div class="row">
-				  			<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
-				  				<a href="tel:+953 012 3654 896">+953 012 3654 896</a>
-				  				<a href="mailto:support@colorlib.com">support@colorlib.com</a>					  
-				  			</div>
-				  			<div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
-				  				<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-									<li><a href="#"><i class="fa fa-behance"></i></a></li>
-				  				</ul>			
-				  			</div>
-				  		</div>			  					
-		  			</div>
-				</div> -->
+	
 			    <div class="container main-menu">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
@@ -64,6 +47,7 @@
 				          <li><a href="#aboutus" style="cursor: pointer;" >About</a></li>
 				          <li><a href="#services" style="cursor: pointer;">Services</a></li>
 				          <li><a href="/projects.html" style="cursor: pointer;">Projects</a></li>
+				          <li><a href="/career.html" style="cursor: pointer;">Careers</a></li>
 				          <li><a href="/contact.html" style="cursor: pointer;" >Contact</a></li>
 				        </ul>
 				      </nav><!-- #nav-menu-container -->		    		
@@ -76,24 +60,73 @@
 			  </header><!-- #header -->
 
 			<!-- start banner Area -->
-			<section class="banner-area relative" style="height: 100vh; background-color: #eee;" id="home">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-					<div class="row fullscreen d-flex justify-content-center align-items-center">
-						<div class="banner-content col-lg-9 col-md-12 justify-content-center ">
-							<h1>
-								Shaping infrastructure with <br>
-								experience and innovation.		
-							</h1>
-							<p class="text-white mx-auto">
-								FORTWALL merges innovation with experience to execute complex projects - on time, on budget and beyond expectations.
-							</p>
-							<a href="#" class="primary-btn header-btn text-uppercase mt-10">Get Started</a>
-						</div>											
-					</div>
-				</div>
-			</section>
-			<!-- End banner Area -->
+<section class="banner-area relative" id="home">
+  <div class="overlay overlay-bg"></div>
+  <div class="container">
+    <div class="row fullscreen d-flex justify-content-center align-items-center">
+      <div class="banner-content col-lg-9 col-md-12 justify-content-center text-center">
+        <h1>
+          Shaping infrastructure with <br>
+          experience and innovation.		
+        </h1>
+        <p class="text-white mx-auto">
+          FORTWALL merges innovation with experience to execute complex projects - 
+          on time, on budget and beyond expectations.
+        </p>
+        <a href="#" class="primary-btn header-btn text-uppercase mt-10">Get Started</a>
+      </div>											
+    </div>
+  </div>
+</section>
+<!-- End banner Area -->
+
+<style>
+  .banner-area {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out;
+    position: relative;
+  }
+
+  .overlay-bg {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0; left: 0;
+    z-index: 1;
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+  }
+</style>
+
+<script>
+  // Banner images
+  
+  const images = [
+    "../img/banner-bg.jpg", // replace with your image path
+    "../img/banner-bg2.jpg",
+    "../img/banner-bg3.jpg"
+  ];
+
+  let index = 0;
+  const banner = document.querySelector(".banner-area");
+
+  // initial image
+  banner.style.backgroundImage = `url(${images[index]})`;
+
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    banner.style.backgroundImage = `url(${images[index]})`;
+  }, 5000); // change every 5 sec
+</script>
+
 			
 			<!-- Start service Area -->
 			<section style="height: auto; background-color: #ddd;" class="service-area section-gap" id="aboutus">
@@ -172,7 +205,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
 								      <div class="content-overlay"></div>
 								  		 <img class="content-image img-fluid d-block mx-auto" src="img/g4.png" alt="">
 								      <div class="content-details fadeIn-bottom">
-								        <h3 class="content-title mx-auto">Plumbing Services</h3>
+								        <h3 class="content-title mx-auto">Mechanical Works</h3>
 								        <a href="projects.html" class="primary-btn text-uppercase mt-20">More Details</a>
 								      </div>
 								    </a>
@@ -207,19 +240,58 @@ FORTWALL, in short, provides a full range of technical sound support services in
 					</div>							
 					<div class="row">
 						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-user"></span>
-									<h4>Civil Works</h4>
-								</a>
-								<p>
-						Innovative infrastructure planning, design, and construction through advanced engineering expertise and sustainable solutions								
-						</p>
-							</div>
-						</div>
+  <div class="single-feature">
+    <a href="javascript:void(0)" 
+       class="title d-flex flex-row align-items-center toggle-dropdown">
+      <span class="lnr lnr-user"></span>
+      <h4>Civil Works</h4>
+    </a>
+    <p>
+      Innovative infrastructure planning, design, and construction through 
+      advanced engineering expertise and sustainable solutions								
+    </p>
+
+    <!-- Hidden Dropdown -->
+    <ul class="dropdown-list">
+      <li>Substation and Control Buildings</li>
+      <li>Site Development & Earthwork</li>
+      <li>Tank Farms</li>
+      <li>Pump Station</li>
+      <li>Bridges, Culverts, Roads, Pavements & Car Parking</li>
+      <li>Multistoried / High raised Commercial & Residential Buildings</li>
+      <li>Hospitals & Hotels</li>
+      <li>Piling & Stabilization Works</li>
+      <li>Pipe Corridors</li>
+      <li>Storm Water Drainage</li>
+      <li>Landscaping</li>
+      <li>Asphalt Paving Works</li>
+      <li>Warehouses</li>
+      <li>Water Proofing & Fireproofing</li>
+      <li>Dewatering & Shoring</li>
+      <li>Temporary Site Offices & Camp Facilities</li>
+      <li>Security Fencing</li>
+    </ul>
+  </div>
+  <script>
+  document.querySelectorAll(".toggle-dropdown").forEach(item => {
+    item.addEventListener("click", function () {
+      const dropdown = this.parentElement.querySelector(".dropdown-list");
+      
+      // Toggle dropdown
+      if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+      } else {
+        dropdown.style.display = "block";
+      }
+    });
+  });
+</script>
+
+</div>
+
 						<div class="col-lg-4 col-md-6">
 							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
+								<a  class="title d-flex flex-row align-items-center">
 									<span class="lnr lnr-license"></span>
 									<h4>Mechanical Services</h4>
 								</a>
@@ -230,7 +302,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
 						</div>
 						<div class="col-lg-4 col-md-6">
 							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
+								<a class="title d-flex flex-row align-items-center">
 									<span class="lnr lnr-phone"></span>
 									<h4>Piping Fabrication</h4>
 								</a>
@@ -242,7 +314,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
 						</div>						
 						<div class="col-lg-4 col-md-6">
 							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
+								<a class="title d-flex flex-row align-items-center">
 									<span class="lnr lnr-rocket"></span>
 									<h4> Plant Maintenance & Shutdown/Turnaround Repair</h4>
 								</a>
@@ -252,7 +324,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
 						</div>
 						<div class="col-lg-4 col-md-6">
 							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
+								<a class="title d-flex flex-row align-items-center">
 									<span class="lnr lnr-diamond"></span>
 									<h4>Surface Preparation / Painting Services</h4>
 								</a>
@@ -263,7 +335,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
 						</div>
 						<div class="col-lg-4 col-md-6">
 							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
+								<a class="title d-flex flex-row align-items-center">
 									<span class="lnr lnr-apartment"></span>
 									<h4> MEP Contracting Service</h4>
 								</a>
@@ -276,7 +348,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
 
 						<div class="col-lg-4 col-md-6">
 							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
+								<a class="title d-flex flex-row align-items-center">
 									<span class="lnr lnr-cog"></span>
 									<h4> Electrical Services
 									</h4>
@@ -290,7 +362,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
 
 							<div class="col-lg-4 col-md-6">
 							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
+								<a class="title d-flex flex-row align-items-center">
 									<span class="lnr lnr-sun"></span>
 									<h4> Power & Lighting</h4>
 								</a>
@@ -303,7 +375,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
 
 							<div class="col-lg-4 col-md-6">
 							<div class="single-feature">
-								<a href="#" class="title d-flex flex-row align-items-center">
+								<a class="title d-flex flex-row align-items-center">
 									<span class="lnr lnr-dice"></span>
 									<h4> Plumbing Services</h4>
 								</a>
@@ -425,144 +497,168 @@ FORTWALL, in short, provides a full range of technical sound support services in
 			<!-- End callto-action Area -->
 								
 			<!-- Start blog Area -->
-			<section class="blog-area section-gap">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-9">
-							<div class="title text-center">
-								<h1 class="mb-10">Awards & Achievements</h1>
-								<p>Celebrating industry-leading milestones that showcase our unwavering dedication to safety, quality, and delivery.</p>
-							</div>
-						</div>
-					</div>							
-					<div class="row">
-						<div class="active-blog-carusel">
-							<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/Awards1.jpg" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-											<li>
-												<a href="#">DOOSAN</a>
-											</li>
-											<li>
-												<a href="#">Jafurah Cogen Project</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title ">Temporary Facilities Relocation Work</h4></a>
-									<p>
-										On-time delivery of critical site infrastructure under challenging logistical conditions
-									</p>
-									<h6 class="date">Dismantling, relocation, and reinstallation of temporary site facilities</h6>
-								</div>	
-							</div>
-							<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/Awards2.jpg" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-											<li>
-												<a href="#">Saudi Binladin Group </a>
-											</li>
-											<li>
-												<a href="#">SBG Project</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title">Civil Works for Storage Area </h4></a>
-									<p>
-										Delivered high-quality execution within project timelines under one of Saudi Arabia's largest contractors.
-									</p>
-									<h6 class="date">Civil works for storage infrastructure</h6>
-								</div>	
-							</div>
-							<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/Awards3.jpg" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-											<li>
-												<a href="#">TIEJUN</a>
-											</li>
-											<li>
-												<a href="#">Qassim Power Plant</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title">Storage Area Civil Works</h4></a>
-									<p>
-										Executed with precision under stringent safety and quality standards.
-									</p>
-									<h6 class="date">Civil works for storage infrastructure</h6>
-								</div>	
+<section class="blog-area section-gap">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-60 col-lg-9">
+        <div class="title text-center">
+          <h1 class="mb-10">Awards & Achievements</h1>
+          <p>
+            Celebrating industry-leading milestones that showcase our unwavering dedication to safety, quality, and delivery.
+          </p>
+        </div>
+      </div>
+    </div>
 
-									
+    <div class="row">
+      <div class="active-blog-carusel owl-carousel">
+        <!-- Item 1 -->
+<div class="single-blog-post item">
+  <div class="thumb">
+    <img class="img-fluid" src="img/Awards1.jpg" alt="">
+  </div>
+  <div class="details">
+    <div class="tags">
+      <ul>
+        <li><a style="font-weight: bold; font-size: 15px;" href="#" class="highlight">DOOSAN</a></li>
+        <li><a style="font-weight: bold; font-size: 15px;" class="highlight">Jafurah Cogen Project</a></li>
+      </ul>
+    </div>
+    <a href="#"><h4 class="title small-title">Temporary Facilities Relocation Work</h4></a>
+    <p>
+      On-time delivery of critical site infrastructure under challenging logistical conditions
+    </p>
+    <h6 class="date">Dismantling, relocation, and reinstallation of temporary site facilities</h6>
+  </div>
+</div>
 
 
-							</div>	
-					
-					
-									<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/Awards4.jpg" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-											<li>
-												<a href="#">FITNESSTIME</a>
-											</li>
-											<li>
-												<a href="#">across Saudi Arabia</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title"> Leejam Sports Company </h4></a>
-									<p>
-										Simultaneous renovation of multiple branches with zero disruption to ongoing gym operations.
-									</p>
-									<h6 class="date">Renovation works across multiple FitnessTime centers.</h6>
-								</div>	
-							</div>			
+        <!-- Item 2 -->
+        <div class="single-blog-post item">
+          <div class="thumb">
+            <img class="img-fluid" src="img/Awards2.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="tags">
+              <ul>
+                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">SAUDI BINLADIN GROUP</a></li>
+                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">SBG Project</a></li>
+              </ul>
+            </div>
+            <a href="#"><h4 class="title small-title">Station Renovation Project Works.</h4></a>
+            <p>
+              Delivered high-quality execution within project timelines under one of Saudi Arabia's largest contractors.
+            </p>
+            <h6 class="date">Civil works for storage infrastructure</h6>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="single-blog-post item">
+          <div class="thumb">
+            <img class="img-fluid" src="img/Awards3.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="tags">
+              <ul>
+                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">TIEJUN</a></li>
+                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">Qassim Power Plant</a></li>
+              </ul>
+            </div>
+            <a href="#"><h4 class="title small-title">Storage Area Civil Works</h4></a>
+            <p>
+              Executed with precision under stringent safety and quality standards.
+            </p>
+            <h6 class="date">Civil works for storage infrastructure</h6>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="single-blog-post item">
+          <div class="thumb">
+            <img class="img-fluid" src="img/Awards4.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="tags">
+              <ul>
+                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">FITNESSTIME</a></li>
+                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">Across Saudi Arabia</a></li>
+              </ul>
+            </div>
+            <a href="#"><h4 class="title small-title">Renovation and Refurbishment Works.</h4></a>
+            <p>
+              Simultaneous renovation of multiple branches with zero disruption to ongoing gym operations.
+            </p>
+            <h6 class="date">Renovation works across multiple FitnessTime centers.</h6>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="single-blog-post item">
+          <div class="thumb">
+            <img class="img-fluid" src="img/Awards5.jpg" alt="">
+          </div>
+          <div class="details">
+            <div class="tags">
+              <ul>
+                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">BURGEEL GROUP</a></li>
+                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">Across Saudi Arabia</a></li>
+              </ul>
+            </div>
+            <a href="#"><h4 class="title small-title">Burjeel Group - "PHYSIOTHERBIA" Centers</h4></a>
+            <p>
+              Delivered high-end physiotherapy centers for the Burjeel Group with concurrent site management across regions.
+            </p>
+            <h6 class="date">Turnkey Fit-Out Projects</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Include jQuery + Owl Carousel JS/CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- ✅ Carousel Settings -->
+<!-- ✅ Carousel Settings -->
+<script>
+  $(document).ready(function () {
+    var $owl = $(".active-blog-carusel");
+
+    // ✅ FIXED: Simple approach - use Owl's built-in autoplay with slideBy
+    $owl.owlCarousel({
+      items: 3,
+      loop: true,
+      margin: 30,
+      autoplay: true,        // ✅ Enable built-in autoplay
+      autoplayTimeout: 4000, // ✅ 4 second interval
+      autoplaySpeed: 800,    // ✅ Animation speed
+      slideBy: 3,            // ✅ This will now work with autoplay
+      dots: true,
+      nav: false,
+      responsive: {
+        0: { items: 1, slideBy: 1 },
+        768: { items: 2, slideBy: 2 },
+        992: { items: 3, slideBy: 3 }
+      }
+    });
+
+    // ✅ Optional: Pause on hover (built-in feature)
+    $owl.on('mouseenter', function() {
+      $owl.trigger('stop.owl.autoplay');
+    });
+    
+    $owl.on('mouseleave', function() {
+      $owl.trigger('play.owl.autoplay', [4000]);
+    });
+  });
+</script>
 
 
-							
-										<div class="single-blog-post item">
-								<div class="thumb">
-									<img class="img-fluid" src="img/Awards5.jpg" alt="">
-								</div>
-								<div class="details">
-									<div class="tags">
-										<ul>
-										
-											<li>
-												<a href="#">cross Saudi Arabia</a>
-											</li>											
-										</ul>
-									</div>
-									<a href="#"><h4 class="title">Burjeel Group -"PHYSIOTHERBIA" Centers</h4></a>
-									<p>
-										Delivered high-end physiotherapy centers for the Burjeel Group with concurrent site management across regions
-									</p>
-									<h6 class="date">Turnkey Fit-Out Projects</h6>
-								</div>	
-
-							</div>
-
-										
-
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End blog Area -->
 
 <section style="background: linear-gradient(135deg, #9e8d57, #c6b069, #bca65d); padding: 80px 0; color: white;">
   <div class="container">
@@ -703,47 +799,92 @@ FORTWALL, in short, provides a full range of technical sound support services in
 			<!-- End brands Area -->			
 
 			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-5 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>About Us</h6>
-								<p>
-								Built to last. Designed to inspire for generations to come worldwide and beyond.
-							</div>
-						</div>
-						<div class="col-lg-5  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-									<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-										<input class="form-control" name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required="" type="email">
-			                            	<button class="click-btn btn btn-default"><i class="lnr lnr-arrow-right" aria-hidden="true"></i></button>
-			                            	<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
-										<div class="info"></div>
-									</form>
-								</div>
-							</div>
-						</div>						
-						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-							<div class="single-footer-widget">
-								<h6>Follow Us</h6>
-								<p>Let us be social</p>
-								<div class="footer-social d-flex align-items-center">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
-								</div>
-							</div>
-						</div>							
-					</div>
-				</div>
-			</footer>	
+	<footer class="footer-area section-gap">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Logo & About -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <div id="logo" style="margin-bottom: 15px;">
+            <a href="index.html">
+              <img style="width: 180px;" src="img/fortwallB.png" alt="Fortwall Logo" title="Fortwall" />
+            </a>
+          </div>
+          <p>
+            Fortwall delivers engineering excellence in civil, mechanical, and electrical projects. 
+            Building trust and infrastructure that lasts for generations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6>Quick Links</h6>
+      <ul  style="list-style:none; padding:0; margin:0;">
+            <li><a style="color: #bca65d;" href="index.html">Home</a></li>
+            <li><a style="color: #bca65d;" href="/#aboutus"  >About</a></li>
+			<li><a style="color: #bca65d;" href="/#services" >Services</a></li>
+			<li><a style="color: #bca65d;" href="/projects.html" >Projects</a></li>
+            <li><a style="color: #bca65d;" href="career.html">Careers</a></li>
+            <li><a style="color: #bca65d;" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6>Contact Us</h6>
+          <p>
+            <strong>Head Office:</strong><br>
+            Al Khobar, Saudi Arabia <br><br>
+            <strong>Branches:</strong><br>
+            Riyadh | India | UAE | Bahrain
+          </p>
+          <p>Email: <a  href="mailto:Info@fortwallgroup.com"><span style="color: #bca65d;">Info@fortwallgroup.com</span></a></p>
+          <p>Tel : 013 823 2006</p>
+        </div>
+      </div>
+
+      <!-- Newsletter & Social -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6>Newsletter</h6>
+          <p>Stay updated with our latest projects and industry insights</p>
+          <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+            <input class="form-control" name="EMAIL" placeholder="Email Address" 
+              onfocus="this.placeholder = ''" 
+              onblur="this.placeholder = 'Email Address'" required="" type="email">
+            <button class="click-btn btn btn-default">
+              <i class="lnr lnr-arrow-right" aria-hidden="true"></i>
+            </button>
+          </form>
+          <div class="footer-social d-flex align-items-center" style="margin-top:15px;">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="row mt-4">
+      <div class="col-lg-12 text-center">
+        <p style="margin:0; font-size:14px; color:#ccc;">
+          © 2025 Fortwall Group. All Rights Reserved. | Designed with passion for engineering excellence
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
 			<!-- End footer Area -->	
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>

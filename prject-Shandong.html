@@ -290,6 +290,7 @@
           <li><a href="/#aboutus">About</a></li>
           <li><a href="/#services">Services</a></li>
           <li><a href="projects.html">Projects</a></li>
+				  <li><a href="/career.html" style="cursor: pointer;">Careers</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -314,6 +315,8 @@ SHANDONG TIEJUN ELECTRIC POWER ENGINEERING CO</h1>
   <!-- Gallery -->
   <div class="image-gallery">
     <!-- You can add more images here -->
+    <img src="img/Projects/SHANDONG/Shandong23.jpg" loading="lazy" alt="Doosan image 3" onclick="openModal(this.src)">
+
     <img src="img/Projects/SHANDONG/Shandong1.jpg" loading="lazy" alt="Doosan image 1" onclick="openModal(this.src)">
     <img src="img/Projects/SHANDONG/Shandong2.jpg" loading="lazy" alt="Doosan image 2" onclick="openModal(this.src)">
     <img src="img/Projects/SHANDONG/Shandong3.jpg" loading="lazy" alt="Doosan image 3" onclick="openModal(this.src)">
@@ -345,49 +348,90 @@ SHANDONG TIEJUN ELECTRIC POWER ENGINEERING CO</h1>
     <img class="modal-content" id="modalImage" />
   </div>
 
-  	<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-5 col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>About Us</h6>
-								<p>
-								Strong builds. Stronger trust, in every project we proudly deliver with excellence.
-								</p>
-			
-							</div>
-						</div>
-						<div class="col-lg-5  col-md-6 col-sm-6">
-							<div class="single-footer-widget">
-								<h6>Newsletter</h6>
-								<p>Stay update with our latest</p>
-								<div class="" id="mc_embed_signup">
-									<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-										<input class="form-control" name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" required="" type="email">
-			                            	<button class="click-btn btn btn-default"><i class="lnr lnr-arrow-right" aria-hidden="true"></i></button>
-			                            	<div style="position: absolute; left: -5000px;">
-												<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-											</div>
-										<div class="info"></div>
-									</form>
-								</div>
-							</div>
-						</div>						
-						<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
-							<div class="single-footer-widget">
-								<h6>Follow Us</h6>
-								<p>Let us be social</p>
-								<div class="footer-social d-flex align-items-center">
-									<a href="#"><i class="fa fa-facebook"></i></a>
-									<a href="#"><i class="fa fa-twitter"></i></a>
-									<a href="#"><i class="fa fa-dribbble"></i></a>
-									<a href="#"><i class="fa fa-behance"></i></a>
-								</div>
-							</div>
-						</div>							
-					</div>
-				</div>
-			</footer>	
+  <footer class="footer-area section-gap">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Logo & About -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <div id="logo" style="margin-bottom: 15px;">
+            <a href="index.html">
+              <img style="width: 180px;" src="img/fortwallB.png" alt="Fortwall Logo" title="Fortwall" />
+            </a>
+          </div>
+          <p>
+            Fortwall delivers engineering excellence in civil, mechanical, and electrical projects. 
+            Building trust and infrastructure that lasts for generations.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6>Quick Links</h6>
+      <ul  style="list-style:none; padding:0; margin:0;">
+            <li><a style="color: #bca65d;" href="index.html">Home</a></li>
+            <li><a style="color: #bca65d;" href="/#aboutus"  >About</a></li>
+			<li><a style="color: #bca65d;" href="/#services" >Services</a></li>
+			<li><a style="color: #bca65d;" href="/projects.html" >Projects</a></li>
+            <li><a style="color: #bca65d;" href="career.html">Careers</a></li>
+            <li><a style="color: #bca65d;" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6>Contact Us</h6>
+          <p>
+            <strong>Head Office:</strong><br>
+            Al Khobar, Saudi Arabia <br><br>
+            <strong>Branches:</strong><br>
+            Riyadh | India | UAE | Bahrain
+          </p>
+          <p>Email: <a  href="mailto:Info@fortwallgroup.com"><span style="color: #bca65d;">Info@fortwallgroup.com</span></a></p>
+          <p>Tel : 013 823 2006</p>
+        </div>
+      </div>
+
+      <!-- Newsletter & Social -->
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="single-footer-widget">
+          <h6>Newsletter</h6>
+          <p>Stay updated with our latest projects and industry insights</p>
+          <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+            <input class="form-control" name="EMAIL" placeholder="Email Address" 
+              onfocus="this.placeholder = ''" 
+              onblur="this.placeholder = 'Email Address'" required="" type="email">
+            <button class="click-btn btn btn-default">
+              <i class="lnr lnr-arrow-right" aria-hidden="true"></i>
+            </button>
+          </form>
+          <div class="footer-social d-flex align-items-center" style="margin-top:15px;">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Copyright -->
+    <div class="row mt-4">
+      <div class="col-lg-12 text-center">
+        <p style="margin:0; font-size:14px; color:#ccc;">
+          © 2025 Fortwall Group. All Rights Reserved. | Designed with passion for engineering excellence
+        </p>
+      </div>
+    </div>
+
+  </div>
+</footer>
 
   <script>
     // Mobile menu toggle

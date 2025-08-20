@@ -2448,10 +2448,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     bottom: 0
 }
 
-.banner-area {
-    background: url(../img/banner-bg.jpg) center;
-    background-size: cover
-}
 
 @media (max-width: 767.98px) {
     .banner-area .fullscreen {
@@ -2822,16 +2818,6 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
-.testimonial-area .owl-dots {
-    text-align: center;
-    bottom: 5px;
-    margin-top: 70px;
-    width: 100%;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden
-}
 
 .testimonial-area .owl-dot {
     height: 10px;
@@ -2900,9 +2886,26 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 }
 
+
+.dropdown-list {
+  list-style-type: disc;   /* show bullets */
+  padding-left: 25px;      /* indent for bullets */
+  margin-top: 10px;
+  display: none;           /* hidden by default */
+}
+
+.dropdown-list li {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #929292;
+  line-height: 1.5;
+}
+
+
+
 .callto-action-wrap {
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/call-action-bg.jpg) center;
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/call-action-bg.jpg) center;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/endtoend.jpg) center;
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/endtoend.jpg) center;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/endtoend.jpg) center;
     background-size: cover;
     border-radius: 10px;
@@ -3010,6 +3013,20 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #222;
     font-weight: 300
 }
+
+/* Highlight for DOOSAN & Jafurah */
+.highlight {
+  font-weight: bold;
+  color: #d9534f; /* Red tone highlight, change as needed */
+}
+
+/* Smaller title */
+.small-title {
+  font-size: 1rem; /* reduced size */
+  font-weight: 500; /* make it less bold */
+  color: #333; /* softer color */
+}
+
 
 @media (max-width: 575px) {
     .blog-area .single-blog-post {
