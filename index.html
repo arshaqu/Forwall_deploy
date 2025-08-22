@@ -58,13 +58,11 @@
 
 
 			  </header><!-- #header -->
-
-			<!-- start banner Area -->
 <!-- start banner Area -->
 <section class="banner-area relative" id="home">
   <div class="overlay overlay-bg"></div>
   <div class="slideshow">
-    <div class="slide active" style="background-image: url('../img/banner-bg.jpg');"></div>
+    <div class="slide" style="background-image: url('../img/banner-bg.jpg');"></div>
     <div class="slide" style="background-image: url('../img/banner-bg2.jpg');"></div>
     <div class="slide" style="background-image: url('../img/banner-bg3.jpg');"></div>
   </div>
@@ -96,18 +94,17 @@
   .slideshow {
     position: absolute;
     top: 0; left: 0;
-    width: 100%;
     height: 100%;
     display: flex;
+    transition: transform 1s ease-in-out;
   }
 
   .slide {
-    min-width: 100%;
+    width: 100vw;   /* full screen */
     height: 100%;
     background-size: cover;
     background-position: center;
     flex-shrink: 0;
-    transition: transform 1s ease-in-out;
   }
 
   .overlay-bg {
@@ -127,18 +124,33 @@
 </style>
 
 <script>
+  const slideshow = document.querySelector(".slideshow");
   const slides = document.querySelectorAll(".slide");
   let index = 0;
 
-  setInterval(() => {
-    index = (index + 1) % slides.length;
-    const offset = -index * 100;
-    slides.forEach(slide => {
-      slide.style.transform = `translateX(${offset}%)`;
-    });
-  }, 5000); // every 5 sec
-</script>
+  // Clone first slide and append to end
+  const firstClone = slides[0].cloneNode(true);
+  slideshow.appendChild(firstClone);
 
+  const totalSlides = slideshow.querySelectorAll(".slide").length;
+
+  function moveSlide() {
+    index++;
+    slideshow.style.transition = "transform 1s ease-in-out";
+    slideshow.style.transform = `translateX(-${index * 100}vw)`;
+
+    if (index === totalSlides - 1) {
+      // After reaching the clone, reset back to real first slide
+      setTimeout(() => {
+        slideshow.style.transition = "none"; // no animation
+        slideshow.style.transform = "translateX(0)";
+        index = 0;
+      }, 1000); // match transition duration
+    }
+  }
+
+  setInterval(moveSlide, 5000); // every 5 sec
+</script>
 
 			
 			<!-- Start service Area -->
