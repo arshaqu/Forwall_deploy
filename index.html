@@ -17,6 +17,8 @@
 		<title>FORTWALL</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 			<!--
 			CSS
 			============================================= -->
@@ -58,6 +60,14 @@
 
 
 			  </header><!-- #header -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200,   // animation duration (ms)
+    once: true        // animate only once
+  });
+</script>
+
 <!-- start banner Area -->
 <section class="banner-area relative" id="home">
   <div class="overlay overlay-bg"></div>
@@ -152,99 +162,634 @@
   setInterval(moveSlide, 5000); // every 5 sec
 </script>
 
-			
-			<!-- Start service Area -->
-			<section style="height: auto; background-color: #ddd;" class="service-area section-gap" id="aboutus">
-				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-md-12 pb-50 header-text text-center">
-							<h1 class="mb-10">About Us</h1>
-							<p>
-							Fortwall International Contracting Company
-							</p>
-						</div>
-					</div>						
-							
-						<div class="col-lg-12">
-							<div class="single-service">
-								<p>
-									The FORTWALL Company consists of full engineering discipline to provide a solution to various industries according to its technical structure. The company has a dynamic approach towards the refinement of necessities to give ultimate results beneficial for parties involved. The company is consistently striving to be the first choice among so many, within the ambit of its resources, capability, technical structure, and instantly available resources. Our team comprising of different fields of knowledge includes civil, mechanical and electrical engineers with magnifying careers. The team is fully equipped in respect of all inevitable to perform small and medium-sized projects.
-								</p>
-									<p class="mt-2 second_p">
-									Fortwall has diversified experience in various fields of construction activities. Fortwall is dynamic in these sectors i.e. civil, mechanical and electrical; however the company’s main expertise lies in the sphere of civil construction.
-								</p>
-									<p class="mt-2">
-FORTWALL, in short, provides a full range of technical sound support services in industrial and commercial construction activities with the ultimate goal to satisfy our clients, eventually to maximize the profits of the parties concerned. The company has it’s Head Office located in Al Khobar and sub-office in Riyadh and branches in India , UAE and Bahrain.								</p>
-							</div>
-						</div>	
-																																		
-				</div>	
-			</section>
-			<!-- End service Area -->
+	<!-- Start About Us Section -->
+<section style="background: linear-gradient(135deg, #C6B069, #e9e2cf);" 
+         class="aboutus-section section-gap" id="aboutus" data-aos="fade-up">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Image -->
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-delay="200">
+        <div class="about-image text-center">
+          <img style="border-radius: 15px;" src="img/Aboutus.jpg" alt="About Fortwall" 
+               class="img-fluid rounded-3 shadow-lg">
+        </div>
+      </div>
+      
+      <!-- Right Content -->
+      <div  class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+        <div style="border-radius: 15px;" class="content-card p-4 p-md-5 bg-white rounded-3 shadow-lg">
+          <h2 class="mb-3 text-dark">About Us</h2>
+          <h5 class="text-muted mb-4">Fortwall International Contracting Company</h5>
+          <p class="text-secondary">
+            The FORTWALL Company provides complete engineering solutions tailored for diverse industries. 
+            With expertise spanning civil, mechanical, and electrical engineering, our dynamic team is 
+            committed to delivering high-quality results in every project.
+          </p>
+          <p class="text-secondary">
+            Our company’s strength lies in civil construction, supported by extensive experience across 
+            multiple domains. With offices in <b>Al Khobar</b> and <b>Riyadh</b>, and branches in 
+            <b>India, UAE,</b> and <b>Bahrain</b>, we are positioned to serve clients worldwide.
+          </p>
+          <p class="fw-bold text-dark">
+            We aim to be the first choice in industrial and commercial construction, ensuring client 
+            satisfaction and long-term success.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
-			<!-- Start gallery Area -->
-			<section style="margin-top: 60px;"  class="gallery-area pb-120 ">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="col-md-12 pb-40 header-text text-center">
-							<h1 class="pb-10">Our Recent Works may impress you</h1>
-							<p>
-							We engineer and execute high-performance projects that integrate precision, discipline, and innovation across every build. Driven by quality and guided by client vision, our work stands as a benchmark in industrial excellence .
-							</p>
-						</div>
-					</div>							
-					<div class="row">
-						<div class="col-lg-8">
-							<div class="single-gallery">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="img/g1.jpg" alt="">
-								      <div class="content-details fadeIn-bottom">
-								        <h3 class="content-title mx-auto">Civil Works</h3>
-								        <a href="projects.html" class="primary-btn text-uppercase mt-20">More Details</a>
-								      </div>
-								    </a>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4">
-							<div class="single-gallery">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="img/g2.jpg" alt="">
-								      <div class="content-details fadeIn-bottom">
-								        <h3 class="content-title mx-auto">MEP Contracting Services</h3>
-								        <a href="projects.html" class="primary-btn text-uppercase mt-20">More Details</a>
-								      </div>
-								    </a>
-								</div>
-							</div>
-						</div>	
-				
-						<div class="col-lg-12">
-							<div class="single-gallery">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="img/g4.png" alt="">
-								      <div class="content-details fadeIn-bottom">
-								        <h3 class="content-title mx-auto">Mechanical Works</h3>
-								        <a href="projects.html" class="primary-btn text-uppercase mt-20">More Details</a>
-								      </div>
-								    </a>
-								</div>
-							</div>
-						</div>												
-						
-						
-					</div>
-			
+<style>
+  .aboutus-section {
+  padding: 80px 0;
+}
 
-				</div>	
-			</section>
-			<!-- End gallery Area -->
+.aboutus-section h2 {
+  font-weight: 700;
+}
+
+.aboutus-section .content-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutus-section .content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll(".fade-in");
+
+    function checkPosition() {
+      const windowHeight = window.innerHeight;
+      elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        if (position < windowHeight - 100) {
+          el.classList.add("show");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", checkPosition);
+    checkPosition();
+  });
+</script>
+
+
+<!-- Start Vision Mission Values Section -->
+<!-- Start Vision Mission Values Section -->
+<section class="vision-mission-modern" id="visionmission">
+    <div class="modern-container">
+        <!-- Header -->
+        <div class="section-header">
+            <div class="header-badge">Our Foundation</div>
+            <h1 class="main-title">Vision, Mission & Core Values</h1>
+            <div class="title-underline"></div>
+        </div>
+
+        <!-- Vision Card -->
+        <div class="vision-section">
+            <div class="vision-card-modern">
+                <div class="card-header">
+                    <div class="icon-circle vision-icon">
+                        <span class="lnr lnr-star"></span>
+                    </div>
+                    <h2>Our Vision</h2>
+                </div>
+                <div class="card-content">
+                    <p>Our vision is to lead the construction industry as one of the top service providers in the country, becoming the <strong>first choice</strong> for clients seeking excellence and reliability.</p>
+                </div>
+                <div class="card-decoration vision-decoration"></div>
+            </div>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="mission-section">
+            <div class="mission-header">
+               
+                <h2>Our Mission</h2>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-number">01</div>
+                    <div class="mission-content">
+                        <h3 style="width: 80%;">Cultivate Collaborative Leadership</h3>
+                        <p>Lead by example, uniting our team and stakeholders to drive innovative solutions that ensure every project exemplifies our commitment to excellence.</p>
+                    </div>
+                    <div class="mission-accent"></div>
+                </div>
+                <div class="mission-card">
+                    <div  class="mission-number">02</div>
+                    <div class="mission-content">
+                        <h3 style="width: 80%;">Pursue Excellence with Integrity</h3>
+                        <p>Set the standard for quality and reliability in the industry, empowering each team member to take ownership and deliver exceptional construction services.</p>
+                    </div>
+                    <div class="mission-accent"></div>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-number">03</div>
+                    <div class="mission-content">
+                        <h3 style="width: 80%;">Foster Empowering Partnerships</h3>
+                        <p>Actively engage with clients and partners, harnessing their insights to refine our offerings and establish ourselves as leaders in delivering shared success.</p>
+                    </div>
+                    <div class="mission-accent"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Core Values Section -->
+        <div class="values-section">
+            <div class="values-header">
+                
+                <h2>Core Values</h2>
+            </div>
+            <div class="values-container">
+                <div class="value-card integrity">
+                    <div class="value-icon-wrapper">
+                       <span class="lnr lnr-heart-pulse"></span>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We build trust through honesty and transparency in all our connections.</p>
+                    <div class="value-glow integrity-glow"></div>
+                </div>
+                <div class="value-card excellence">
+                    <div class="value-icon-wrapper">
+                        <span class="lnr lnr-diamond"></span>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>We deliver top-quality results, continuously seeking innovation and improvement.</p>
+                    <div class="value-glow excellence-glow"></div>
+                </div>
+                <div class="value-card collaboration">
+                    <div class="value-icon-wrapper">
+                        <span class="lnr lnr-license"></span>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We empower teamwork among stakeholders to achieve shared success.</p>
+                    <div class="value-glow collaboration-glow"></div>
+                </div>
+                <div class="value-card responsibility">
+                    <div class="value-icon-wrapper"><span class="lnr lnr-layers"></span> <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Responsibility</h3>
+                    <p>We take ownership of our actions, prioritizing safety and sustainability in all we do.</p>
+                    <div class="value-glow responsibility-glow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+<!-- End Vision Mission Values Section -->
+
+<style>
+/* Modern Vision Mission Section Styles */
+.vision-mission-modern {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%);
+    padding: 80px 20px;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modern-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header Styles */
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.header-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, #C6B069, #feca57);
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(198, 176, 105, 0.3);
+    transform: translateY(-10px);
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #2c3e50, #C6B069);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.title-underline {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #C6B069, #feca57);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Vision Section */
+.vision-section {
+    margin-bottom: 80px;
+    animation: slideInLeft 1s ease-out 0.3s both;
+}
+
+.vision-card-modern {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(198, 176, 105, 0.3);
+    border-radius: 25px;
+    padding: 50px;
+    position: relative;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vision-card-modern:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(198, 176, 105, 0.2);
+    border-color: rgba(198, 176, 105, 0.6);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    position: relative;
+}
+
+.vision-icon {
+    background: linear-gradient(45deg, #C6B069, #feca57);
+}
+
+.card-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.card-content p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #495057;
+    margin: 0;
+}
+
+.card-decoration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.vision-decoration {
+    background: radial-gradient(circle, #C6B069, transparent);
+    border-radius: 50%;
+}
+
+/* Mission Section */
+.mission-section {
+    margin-bottom: 80px;
+    animation: slideInRight 1s ease-out 0.5s both;
+}
+
+.mission-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.mission-icon {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+}
+
+.mission-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.mission-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.mission-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(198, 176, 105, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.mission-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(198, 176, 105, 0.2);
+}
+
+.mission-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #C6B069;
+    margin-bottom: 15px;
+}
+
+.mission-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #6c757d;
+    margin: 0;
+}
+
+.mission-accent {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #C6B069, #feca57);
+}
+
+/* Values Section */
+.values-section {
+    animation: slideInUp 1s ease-out 0.7s both;
+}
+
+.values-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.values-icon {
+    background: linear-gradient(45deg, #4ecdc4, #44a08d);
+}
+
+.values-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.values-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.value-card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(20px);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(198, 176, 105, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.value-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #C6B069, #feca57);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 28px;
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(198, 176, 105, 0.3);
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #6c757d;
+    margin: 0;
+}
+
+.value-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.value-card:hover .value-glow {
+    opacity: 0.1;
+}
+
+.integrity-glow { background: radial-gradient(circle, #C6B069, transparent); }
+.excellence-glow { background: radial-gradient(circle, #C6B069, transparent); }
+.collaboration-glow { background: radial-gradient(circle, #C6B069, transparent); }
+.responsibility-glow { background: radial-gradient(circle, #C6B069, transparent); }
+
+
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .vision-mission-modern {
+        padding: 60px 15px;
+    }
+
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    .vision-card-modern,
+    .mission-card,
+    .value-card {
+        padding: 30px 20px;
+    }
+
+    .card-header,
+    .mission-header,
+    .values-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .card-header h2,
+    .mission-header h2,
+    .values-header h2 {
+        font-size: 2rem;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-container {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-number {
+        font-size: 3rem;
+        top: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 2rem;
+    }
+
+    .card-header h2,
+    .mission-header h2,
+    .values-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .value-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+</style>
+
+		
 				
 			<!-- Start feature Area -->
 			<section id="services" class="feature-area section-gap ">
@@ -270,10 +815,8 @@ FORTWALL, in short, provides a full range of technical sound support services in
     <span class="lnr lnr-user"></span>
     <h4>Civil Works</h4>
   </a>
-  <p>
-    Innovative infrastructure planning, design, and construction through 
-    advanced engineering expertise and sustainable solutions								
-  </p>
+  <p style="letter-spacing: 1px;">
+Heavy industrial, civil and underground works, pipeline civil works, all types of heavy foundation and structural works.  </p>
 
   <!-- Hidden Dropdown -->
   <ul class="dropdown-list">
@@ -300,17 +843,19 @@ FORTWALL, in short, provides a full range of technical sound support services in
   <script>
   document.querySelectorAll(".toggle-dropdown").forEach(item => {
     item.addEventListener("click", function () {
-      const dropdown = this.parentElement.querySelector(".dropdown-list");
+      // Close all other boxes
+      document.querySelectorAll(".toggle-dropdown").forEach(el => {
+        if (el !== this) {
+          el.classList.remove("active");
+        }
+      });
       
-      // Toggle dropdown
-      if (dropdown.style.display === "block") {
-        dropdown.style.display = "none";
-      } else {
-        dropdown.style.display = "block";
-      }
+      // Toggle clicked box
+      this.classList.toggle("active");
     });
   });
 </script>
+
 
 </div>
 
@@ -318,13 +863,35 @@ FORTWALL, in short, provides a full range of technical sound support services in
 							<div class="single-feature">
 								<a  class="title d-flex flex-row align-items-center">
 									<span class="lnr lnr-license"></span>
-									<h4>Mechanical Services</h4>
+									<h4>Infrastructure</h4>
 								</a>
-								<p>
-									Comprehensive mechanical system design, prototyping, and assembly—from HVAC units to industrial machinery—ensuring long-term reliability.
-								</p>
+								<p style="letter-spacing: 1px; ">
+Construction of industrial estates, community housing and townships, onshore marine works.								</p>
 							</div>
 						</div>
+
+
+            	<div class="col-lg-4 col-md-6">
+							<div class="single-feature">
+								<a class="title d-flex flex-row align-items-center">
+									<span class="lnr lnr-rocket"></span>
+									<h4>ELECTROMECHANICAL</h4>
+								</a>
+								<p>
+Building electromechanical and plumbing works (MEP), tank fabrication and installation works, HVAC works, medium and low voltage electrical works.							</div>
+						</div>
+
+            	<div class="col-lg-4 col-md-6">
+							<div class="single-feature">
+								<a class="title d-flex flex-row align-items-center">
+									<span class="lnr lnr-rocket"></span>
+									<h4> SITE FACILITIES & LOGISTICS</h4>
+								</a>
+								<p>
+Early site and mobilization works, temporary construction facilities and associated construction services.							</div>
+						</div>
+
+
 						<div class="col-lg-4 col-md-6">
 							<div class="single-feature">
 								<a class="title d-flex flex-row align-items-center">
@@ -344,71 +911,16 @@ FORTWALL, in short, provides a full range of technical sound support services in
 									<h4> Plant Maintenance & Shutdown/Turnaround Repair</h4>
 								</a>
 								<p>
-									"Planned maintenance and repair management during shutdowns, maximizing uptime through scheduling, diagnostics, and rapid turnaround."
+									Planned maintenance and repair management during shutdowns, maximizing uptime through scheduling, diagnostics, and rapid turnaround.
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-diamond"></span>
-									<h4>Surface Preparation / Painting Services</h4>
-								</a>
-								<p>
-									"Advanced surface treatment and protective coatings that prevent corrosion, enhance durability, and ensure reliability—ideal for industrial and civil structures."
-								</p>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-apartment"></span>
-									<h4> MEP Contracting Service</h4>
-								</a>
-								<p>
-								"Design, installation, and coordination of mechanical, electrical, and plumbing systems, optimized for building efficiency, energy performance, safety, and occupant comfort in diverse project environments."
-								</p>
-							</div>
-							
-						</div>	
+					
+					
 
-						<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-cog"></span>
-									<h4> Electrical Services
-									</h4>
-								</a>
-								<p>
-							Comprehensive electrical system design, installation, testing, and commissioning—from power distribution to control systems—ensuring safe and efficient operations.
-								</p>
-							</div>
-							
-						</div>
+					
+						
 
-							<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-sun"></span>
-									<h4> Power & Lighting</h4>
-								</a>
-								<p>
-							"Turnkey solutions for power distribution and lighting systems in buildings and industrial processes, improving energy efficiency, visibility, and safety compliance."
-								</p>
-							</div>
-							
-						</div>
-
-							<div class="col-lg-4 col-md-6">
-							<div class="single-feature">
-								<a class="title d-flex flex-row align-items-center">
-									<span class="lnr lnr-dice"></span>
-									<h4> Plumbing Services</h4>
-								</a>
-								<p>
-							"Complete plumbing solutions: from water supply and drainage to sanitation systems, designed for reliability, efficiency, sustainability, and ease of maintenance in all environments."								</p>
-							</div>
-							
-						</div>
+						
 							
 
 
@@ -416,19 +928,72 @@ FORTWALL, in short, provides a full range of technical sound support services in
 				</div>	
 			</section>
 			<!-- End feature Area -->		
+
+
+      	<!-- Start gallery Area -->
+			<section style="margin-top: 60px;"  class="gallery-area pb-120 ">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="col-md-12 pb-40 header-text text-center">
+							<h1 style="color: #16173F;"  class="pb-10">Our Recent Works may impress you</h1>
+							We engineer and execute high-performance projects that integrate precision, discipline, and innovation across every build. Driven by quality and guided by client vision, our work stands as a benchmark in industrial excellence .
+							<p></p>
+						</div>
+					</div>							
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="single-gallery">
+								<div class="content">
+								    <a href="#" target="_blank">
+								      <div class="content-overlay"></div>
+								  		 <img class="content-image img-fluid d-block mx-auto" src="img/g1.jpg" alt="">
+								      <div class="content-details fadeIn-bottom">
+								        <h3 class="content-title mx-auto">Civil Works</h3>
+								        <a href="projects.html" class="primary-btn text-uppercase mt-20">More Details</a>
+								      </div>
+								    </a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4">
+							<div class="single-gallery">
+								<div class="content">
+								    <a href="#" target="_blank">
+								      <div class="content-overlay"></div>
+								  		 <img class="content-image img-fluid d-block mx-auto" src="img/g2.jpg" alt="">
+								      <div class="content-details fadeIn-bottom">
+								        <h3 class="content-title mx-auto">Electro Mechanical Works</h3>
+								        <a href="projects.html" class="primary-btn text-uppercase mt-20">More Details</a>
+								      </div>
+								    </a>
+								</div>
+							</div>
+						</div>	
+				
+	
+						
+					</div>
+			
+
+				</div>	
+			</section>
+			<!-- End gallery Area -->
+
+
+
 		
 		    <!-- Start testimonial Area -->
-		    <section class="testimonial-area pt-120">
-		        <div class="container">
+		    <section style="background-color: #C6B069; " class="testimonial-area pt-120 ">
+		        <div   class="container">
 		            <div class="row d-flex justify-content-center">
 		                <div class="menu-content pb-70 col-lg-8 justify-content-center">
 		                    <div class="title text-center">
-		                        <h1 class="mb-10">Testimonial from our Clients</h1>
+		                        <h1 class="mb-10 header-text">Testimonial from our Clients</h1>
 		                        <p>Who are in extremely love with eco friendly system.</p>
 		                    </div>
 		                </div>
 		            </div>
-		            <div class="row">
+		            <div  class="row">
 		                <div class="active-testimonial-carusel">
 		                    <div class="single-testimonial item d-flex flex-row">
 		                        <div class="thumb">
@@ -483,7 +1048,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
 		                        <div class="thumb">
 		                            <img class="img-fluid" src="img/powerchinaL.png" alt="">
 		                        </div>
-		                        <div class="desc">
+		                        <div style="margin-bottom: 2000px;" class="desc">
 		                            <p>
 		                                Handling the Temporary Construction Facilities at our site required precision and planning—qualities this team brought to the table from day one. Their execution was efficient and dependable
 		                            </p>
@@ -546,7 +1111,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
     <div class="tags">
       <ul>
         <li><a style="font-weight: bold; font-size: 15px;" href="#" class="highlight">DOOSAN</a></li>
-        <li><a style="font-weight: bold; font-size: 15px;" class="highlight">Jafurah Cogen Project</a></li>
+        <li><a style="font-weight: bold; font-size: 13px;" class="highlight">JAFURAH COGEN PROJECT</a></li>
       </ul>
     </div>
     <a href="#"><h4 class="title small-title">Temporary Facilities Relocation Work</h4></a>
@@ -567,7 +1132,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
             <div class="tags">
               <ul>
                 <li><a style="font-weight: bold; font-size: 15px;" class="highlight">SAUDI BINLADIN GROUP</a></li>
-                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">SBG Project</a></li>
+                <li><a style="font-weight: bold; font-size: 13px;" class="highlight">KINGDOM TOWER</a></li>
               </ul>
             </div>
             <a href="#"><h4 class="title small-title">Station Renovation Project Works.</h4></a>
@@ -587,7 +1152,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
             <div class="tags">
               <ul>
                 <li><a style="font-weight: bold; font-size: 15px;" class="highlight">TIEJUN</a></li>
-                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">Qassim Power Plant</a></li>
+                <li><a style="font-weight: bold; font-size: 13px;" class="highlight">QASSIM POWER PLANT</a></li>
               </ul>
             </div>
             <a href="#"><h4 class="title small-title">Storage Area Civil Works</h4></a>
@@ -606,8 +1171,8 @@ FORTWALL, in short, provides a full range of technical sound support services in
           <div class="details">
             <div class="tags">
               <ul>
-                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">FITNESSTIME</a></li>
-                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">Across Saudi Arabia</a></li>
+                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">LEEJAM SPORTS COMPANY</a></li>
+                <li><a style="font-weight: bold; font-size: 13px;" class="highlight">FITNESSTIME</a></li>
               </ul>
             </div>
             <a href="#"><h4 class="title small-title">Renovation and Refurbishment Works.</h4></a>
@@ -627,7 +1192,7 @@ FORTWALL, in short, provides a full range of technical sound support services in
             <div class="tags">
               <ul>
                 <li><a style="font-weight: bold; font-size: 15px;" class="highlight">BURGEEL GROUP</a></li>
-                <li><a style="font-weight: bold; font-size: 15px;" class="highlight">Across Saudi Arabia</a></li>
+                <li><a style="font-weight: bold; font-size: 13px;" class="highlight">PHYSIOTHERBIA</a></li>
               </ul>
             </div>
             <a href="#"><h4 class="title small-title">Burjeel Group - "PHYSIOTHERBIA" Centers</h4></a>

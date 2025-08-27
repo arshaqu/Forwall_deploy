@@ -8,6 +8,16 @@
     color: #fff
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 
@@ -2532,7 +2542,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .single-service {
     text-align: start;
-    border: 1px solid #eee;
     border-radius: 10px;
     padding: 25px;
     -webkit-transition: all 0.3s ease 0s;
@@ -2812,15 +2821,57 @@ body.mobile-nav-active #mobile-nav-toggle {
     color: #c6b069
 }
 
+.single-feature {
+  background: #fff;
+  padding: 32px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 250px;                  /* default fixed height */
+  cursor: pointer;
+
+  /* Center content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;        /* vertical center */
+  align-items: center;            /* horizontal center */
+  text-align: left;
+}
+
+.single-feature.active {
+  height: auto;                   /* expand only the clicked one */
+  justify-content: flex-start;    /* align to top when expanded */
+}
+
+.dropdown-list {
+  display: none;
+  margin-top: 15px;
+  padding-left: 0;
+  list-style: none;               /* remove bullets (optional) */
+  text-align: left;               /* keep dropdown text aligned nicely */
+  width: 100%;
+}
+
+.single-feature.active .dropdown-list {
+  display: block;
+}
+
 @media (max-width: 1024px) {
     .feature-area .single-feature {
         padding: 30px
     }
 }
 
+@media (max-width: 768px) {
+  .weengineer {
+    font-size: 10px;
+  }
+}
+
 
 .testimonial-area .owl-dot {
-    height: 10px;
+    height: 100px;
     width: 10px;
     display: inline-block;
     background: rgba(198, 176, 105, 0.2);
