@@ -2372,7 +2372,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .section-gap {
-    padding: 120px 0
+    padding: 120px 0px 10px 0px
 }
 
 .section-title {
@@ -3121,11 +3121,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-area {
-    padding-top: 100px
 }
 
 .footer-area h6 {
-    margin-bottom: 25px;
     font-size: 18px;
     font-weight: 600
 }
