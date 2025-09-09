@@ -722,7 +722,16 @@
     }
 
     .main-title {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
+    }
+
+      .main-titles {
+        font-size: 2.7rem;
+    }
+
+    
+      .main-titlesub {
+        font-size: 2.4rem;
     }
 
     .vision-card-modern,
@@ -785,6 +794,78 @@
 }
 </style>
 
+
+
+
+<!-- Start Stats Area -->
+<section class="stats-area section-gap" style="background: #9f9f9f; padding: 60px 0;">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-6">
+        <div class="single-stat">
+          <i class="lnr lnr-apartment" style="font-size:40px; color:#ffffff;"></i>
+          <h2 class="count" data-target="50" style="color: #ffffff; margin-top:10px;">0</h2>
+          <p style="color: #ffffff;">Clients</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="single-stat">
+          <i class="lnr lnr-screen" style="font-size:40px; color:#fff;"></i>
+          <h2 class="count" data-target="40" style="color: #ffffff; margin-top:10px;">0</h2>
+          <p style="color: #ddd;">Completed Projects</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="single-stat">
+          <i class="lnr lnr-users" style="font-size:40px; color:#fff;"></i>
+          <h2 class="count" data-target="1000" style="color: #ffffff; margin-top:10px;">0</h2>
+          <p style="color: #ddd;">Workers Employed</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="single-stat">
+          <span class="lnr lnr-thumbs-up" style="font-size:40px; color:#fff;"></span>
+          <h2 class="count" data-target="100" style="color: #ffffff; margin-top:10px;">0</h2>
+          <p style="color: #ddd;">Certified Engineers</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Stats Area -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const counters = document.querySelectorAll(".count");
+
+    counters.forEach(counter => {
+      const animate = () => {
+        const target = +counter.getAttribute("data-target");
+        let count = +counter.innerText;
+
+        // Dynamic increment based on target value
+        let increment;
+        if (target > 500) {
+          increment = Math.ceil(target / 80); // Faster for big numbers
+        } else {
+          increment = Math.ceil(target / 120); // Slower & smoother for small ones
+        }
+
+        if (count < target) {
+          counter.innerText = count + increment;
+          setTimeout(animate, 15); // smaller delay = faster animation
+        } else {
+          counter.innerText = target + "+"; // final value
+        }
+      };
+
+      animate();
+    });
+  });
+</script>
+
+
+
+
 		
 				
 			<!-- Start feature Area -->
@@ -794,11 +875,11 @@
 						<div class="col-md-12 pb-40 header-text text-center">
 							<div class="row justify-content-center">
 						<div class="col-md-12  header-text text-center">
-							<h1 style="color: white;" class="mb-10 ">OUR SERVICES</h1>
+							<h1 style="color: white;" class="mb-10 main-titles">OUR SERVICES</h1>
 						
 						</div>
 					</div>	
-							<h1 class="pb-10 text-white">Some Features that Made us Unique</h1>
+							<h1 class="pb-10 text-white main-titlesub">Some Features that Made us Unique</h1>
 							<p class="text-white">
 								Who are in extremely love with eco friendly system.
 							</p>
@@ -881,10 +962,10 @@ Building electromechanical and plumbing works (MEP), tank fabrication and instal
 							<div class="single-feature">
 								<a class="title d-flex flex-row align-items-center">
 									<span class="lnr lnr-rocket"></span>
-									<h4> SITE FACILITIES & LOGISTICS</h4>
+									<h4> SITE FACILITIES </h4>
 								</a>
 								<p>
-Early site and mobilization works, temporary construction facilities and associated construction services.							</div>
+Managed temporary and permanent facilities including camps, offices, and warehouses. Oversaw logistics for site mobilization and construction support services.							</div>
 						</div>
 
 
@@ -931,18 +1012,18 @@ Early site and mobilization works, temporary construction facilities and associa
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="col-md-12 pb-40 header-text text-center">
-							<h1 style="color: #16173F;"  class="pb-10">Our Recent Works may impress you</h1>
+							<h1 style="color: #16173F;"  class="pb-10 titlesub">Our Recent Works may impress you</h1>
 							We engineer and execute high-performance projects that integrate precision, discipline, and innovation across every build. Driven by quality and guided by client vision, our work stands as a benchmark in industrial excellence .
 							<p></p>
 						</div>
 					</div>							
 					<div class="row">
-						<div class="col-lg-4">
+						<div class="col-lg-6">
 							<div class="single-gallery">
 								<div class="content">
 								    <a href="#" target="_blank">
 								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="img/g1.jpg" alt="">
+								  		 <img class="content-image img-fluid d-block mx-auto" style="border-radius: 10px;" src="img/g1.jpg" alt="">
 								      <div class="content-details fadeIn-bottom">
 								        <h3 class="content-title mx-auto">Civil Works</h3>
 								        <a href="projects.html" class="primary-btn text-uppercase mt-20">More Details</a>
@@ -951,12 +1032,12 @@ Early site and mobilization works, temporary construction facilities and associa
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-8">
+						<div class="col-lg-6">
 							<div class="single-gallery">
 								<div class="content">
 								    <a href="#" target="_blank">
 								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="img/g2.jpg" alt="">
+								  		 <img class="content-image img-fluid d-block mx-auto" style="border-radius: 10px;"  src="img/g2.jpg" alt="">
 								      <div class="content-details fadeIn-bottom">
 								        <h3 class="content-title mx-auto">Electro Mechanical Works</h3>
 								        <a href="projects.html" class="primary-btn text-uppercase mt-20">More Details</a>
@@ -984,7 +1065,7 @@ Early site and mobilization works, temporary construction facilities and associa
 		            <div class="row d-flex justify-content-center">
 		                <div class="menu-content pb-70 col-lg-8 justify-content-center">
 		                    <div class="title text-center">
-		                        <h1 class="mb-10 header-text">Testimonial from our Clients</h1>
+		                        <h1 class="mb-10 header-text titlesub">Testimonial from our Clients</h1>
 		                        <p>Who are in extremely love with eco friendly system.</p>
 		                    </div>
 		                </div>
@@ -1031,6 +1112,8 @@ Early site and mobilization works, temporary construction facilities and associa
 		                    <div class="single-testimonial item d-flex flex-row">
 		                        <div class="thumb">
 		                            <img class="img-fluid" src="img/metroLogo.png" alt="">
+		                            <img class="img-fluid mt-4" src="img/Brands8.png" alt="">
+
 		                        </div>
 		                        <div class="desc">
 		                            <p>
@@ -1088,7 +1171,7 @@ Early site and mobilization works, temporary construction facilities and associa
     <div class="row d-flex justify-content-center">
       <div class="menu-content pb-60 col-lg-9">
         <div class="title text-center">
-          <h1 class="mb-10">Awards & Achievements</h1>
+          <h1 class="mb-10 titlesub">Awards & Achievements</h1>
           <p>
             Celebrating industry-leading milestones that showcase our unwavering dedication to safety, quality, and delivery.
           </p>
@@ -1191,7 +1274,7 @@ Early site and mobilization works, temporary construction facilities and associa
                 <li><a style="font-weight: bold; font-size: 13px;" class="highlight">PHYSIOTHERBIA CENTERS</a></li>
               </ul>
             </div>
-            <a href="#"><h4 class="title small-title">Interior fit-out design </h4></a>
+            <a href="#"><h4 class="title small-title">Interior fit-out works </h4></a>
             <p>
               Delivered high-end physiotherapy centers for the Burjeel Group with concurrent site management across regions.
             </p>
