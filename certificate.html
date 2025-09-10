@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+	<html lang="zxx" class="no-js">
+	<head>
+		<!-- Mobile Specific Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Favicon-->
+		<link rel="shortcut icon" href="img/logo.png">
+		<!-- Author Meta -->
+		<meta name="author" content="colorlib">
+		<!-- Meta Description -->
+		<meta name="description" content="">
+		<!-- Meta Keyword -->
+		<meta name="keywords" content="">
+		<!-- meta character set -->
+		<meta charset="UTF-8">
+		<!-- Site Title -->
+		<title>FORTWALL</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css">
+			<link rel="stylesheet" href="css/font-awesome.min.css">
+			<link rel="stylesheet" href="css/bootstrap.css">
+			<link rel="stylesheet" href="css/magnific-popup.css">
+			<link rel="stylesheet" href="css/nice-select.css">							
+			<link rel="stylesheet" href="css/animate.min.css">
+			<link rel="stylesheet" href="css/owl.carousel.css">
+			<link rel="stylesheet" href="css/main.css">
+		</head>
+		<body>	
+			<header id="header" id="project">
+		  	
+
+			    	    <div class="container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="index.html"><img style="width: 180px;" src="img/Mlogowhite.png" loading="lazy" alt="" title="" /></a>
+				      </div>
+				      <nav id="nav-menu-container">
+				             <ul  class="nav-menu">
+				          <li class="menu-active"><a href="index.html">Home</a></li>
+				          <li><a href="/#aboutus" style="cursor: pointer;" >About</a></li>
+				          <li><a href="/#services" style="cursor: pointer;">Services</a></li>
+				          <li><a href="/projects.html" style="cursor: pointer;">Projects</a></li>
+				          <li><a href="/certificate.html" style="cursor: pointer;">Certificate</a></li>
+
+				          <li><a href="/career.html" style="cursor: pointer;">Careers</a></li>
+				          <li><a href="/contact.html" style="cursor: pointer;" >Contact</a></li>
+				        </ul>
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
+
+
+  <style>
+    /* Hero Section */
+    .cert-hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/cert-banner.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .cert-hero h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #c6b069;
+    }
+
+    /* Certificate Grid */
+    .certificate-gallery {
+      max-width: 1400px; /* increased width */
+      margin: 60px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* larger card */
+      gap: 35px; /* bigger spacing */
+      justify-content: center;
+    }
+
+    .certificate-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px; /* extra spacing */
+    }
+    .certificate-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    /* Show image in original size */
+    .certificate-card img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+
+.certificate-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  color: white;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  border: 1px solid #C6B069; /* 🔴 red border */
+}
+.certificate-card:hover .certificate-overlay {
+  opacity: 1;
+}
+
+
+    .certificate-overlay h3 {
+      font-size: 1.8rem; /* larger title */
+      margin-bottom: 18px;
+      font-weight: bold;
+    }
+
+    .certificate-overlay .btn {
+      background: #c6b069;
+      color: #fff;
+      border: none;
+      padding: 12px 26px; /* bigger button */
+      border-radius: 25px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+    .certificate-overlay .btn:hover {
+      background: #a89454;
+    }
+
+    /* Modal Popup */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding-top: 60px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 95%;
+      max-height: 95%;
+      width: auto;
+      height: auto;
+      border-radius: 10px;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover {
+      color: #c6b069;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="cert-hero">
+    <h1>Our Certificates</h1>
+    <p>Recognitions and achievements that reflect our commitment to quality.</p>
+  </section>
+
+  <!-- Certificate Gallery -->
+  <section class="certificate-gallery">
+    <div class="certificate-card">
+      <img src="img/certificate1.jpg" alt="Certificate 1">
+      <div class="certificate-overlay">
+        <h3 style="color: #C6B069; border-bottom: 2px solid #C6B069; display: inline-block; padding-bottom: 5px; margin: 15px;">
+  Environmental Management System 
+</h3>
+        <button class="btn" onclick="openModal('img/certificate1.jpg')">More Details</button>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="img/certificate2.jpg" alt="Certificate 2">
+      <div class="certificate-overlay">
+              <h3 style="color: #C6B069; border-bottom: 2px solid #C6B069; display: inline-block; padding-bottom: 5px; margin: 15px;">
+  Occupational Health and Safety Management System
+</h3>
+        <button class="btn" onclick="openModal('img/certificate2.jpg')">More Details</button>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="img/certificate3.jpg" alt="Certificate 3">
+      <div class="certificate-overlay">
+              <h3 style="color: #C6B069; border-bottom: 2px solid #C6B069; display: inline-block; padding-bottom: 5px; margin: 15px;">
+  Quality Mangement System
+</h3>
+        <button class="btn" onclick="openModal('img/certificate3.jpg')">More Details</button>
+      </div>
+    </div>
+
+    <div class="certificate-card">
+      <img src="img/certificate4.jpg" alt="Certificate 4">
+      <div class="certificate-overlay">
+             <h3 style="color: #C6B069; border-bottom: 2px solid #C6B069; display: inline-block; padding-bottom: 5px; margin: 15px;">
+Cybersecurity Compliance
+</h3>
+        <button class="btn" onclick="openModal('img/certificate4.jpg')">More Details</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Popup -->
+  <div id="imgModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+
+  <script>
+    function openModal(src) {
+      document.getElementById("imgModal").style.display = "block";
+      document.getElementById("modalImg").src = src;
+    }
+    function closeModal() {
+      document.getElementById("imgModal").style.display = "none";
+    }
+  </script>
+</body>
+</html>
